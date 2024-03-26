@@ -4,7 +4,9 @@
 @prefix la: <https://linked.art/ns/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+
 <https://linkeddata.cultureelerfgoed.nl/rce/graph/Van-Gogh-World-Wide-RCE> {
+
 <http://vocab.getty.edu/ulan/500115588> a crm:E39_Actor ;
     rdfs:label "Gogh, Vincent van"@nl .
 
@@ -3698,13 +3700,13 @@
     crm:P190_has_symbolic_content "D2016-010" ;
     crm:P2_has_type <https://data.cultureelerfgoed.nl/term/id/rn/70003ebd-15ba-4f93-9c0c-baac09ccff44> .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14743149#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24346071> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14743149> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14743835#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24324367> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14743835> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14757690#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14814813> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14757690> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14812243#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14822145> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14812243> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14813148> a dig:D1_Digital_Object .
 
@@ -3805,6 +3807,8 @@
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14814787> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14814793> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14814813> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14814820> a dig:D1_Digital_Object .
 
@@ -3932,41 +3936,73 @@
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14817713> a dig:D1_Digital_Object .
 
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14822145> a dig:D1_Digital_Object .
+
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14822462> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14854586#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14855763> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14854586> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14865580#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14867837#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23682264> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14855763> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14866934#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14865814#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23682159> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14865580> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14874187#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14872809> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14865814> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14866934> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14867837> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14872809> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14874187> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14876418> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14902075#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14876853> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14876853> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14904973#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14902550> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14902075> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14905592#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14905025> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14902550> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14904973> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14905025> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14905592> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14907244> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14909313> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14909653#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14907244> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14909653> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16542570#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16544284> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16542570> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16547516#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16542589> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16542589> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16544284> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16547516> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17713395> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17789343#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17786753> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17786753> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17817763#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17813491> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17789343> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17818089#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17818562> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17813491> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634189#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634692#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634192> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17817763> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17818089> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17818562> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634189> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634192> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634692> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23637394> a dig:D1_Digital_Object .
 
@@ -3974,7 +4010,13 @@
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23681930> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23997511#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23997012> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23682159> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23682264> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23997012> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23997511> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24299119> a dig:D1_Digital_Object .
 
@@ -3988,6 +4030,12 @@
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24311004> a dig:D1_Digital_Object .
 
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24324367> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24346071> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24483912> a dig:D1_Digital_Object .
+
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24515153> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24516162> a dig:D1_Digital_Object .
@@ -4000,7 +4048,9 @@
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=25416103> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=26407786#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=26410383> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=26407786> a dig:D1_Digital_Object .
+
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=26410383> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=28411587> a dig:D1_Digital_Object .
 
@@ -4008,7 +4058,7 @@
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=35835727> a dig:D1_Digital_Object .
 
-<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=39546859#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24483912> a dig:D1_Digital_Object .
+<https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=39546859> a dig:D1_Digital_Object .
 
 <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=39546962> a dig:D1_Digital_Object .
 
@@ -4166,7 +4216,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/71e756ab-bb90-4167-b7a7-9c51b75f6dae>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/ca90942c-037d-43bd-87a9-1f4078174740> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14909653#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14907244> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14907244>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14909653> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/07e2a503-7762-46f8-ab5a-1d0dd051f022> a crm:E22_Human-Made_Object ;
     crm:P108i_was_produced_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/89888b3c-7f2a-34bf-8e35-23c984635545> ;
@@ -4516,7 +4567,9 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/175a323a-cd4f-4467-a5b7-c58311fb76f0>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/55c547e1-b3fd-4065-8355-c868434b99db> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634189#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634692#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634192> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634189>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634192>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23634692> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/1550fe31-2bd4-43f9-95a3-b34b904413d4> a crm:E14_Condition_Assessment ;
     crm:P14_carried_out_by <https://data.cultureelerfgoed.nl/term/id/rn/14060053-b675-4c06-9193-b74c242f362f>,
@@ -5354,7 +5407,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/148e9699-7e06-45fb-8ac6-962bc5024f67>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/44ead8cb-70e3-414f-994b-04ce8069dc5f> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17817763#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17813491> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17813491>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17817763> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/33f3982c-a879-3c34-bd98-2d7d7f142d3c> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/43300a54-f9cf-3b9c-832b-4370525ddf48>,
@@ -5515,7 +5569,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/3142565f-0ab7-4870-8efc-3aef048bccc5>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/e1424ca3-d12d-4534-af25-777cacc65e26> ;
     crm:P72_has_language "Engels" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16542570#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16544284> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16542570>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16544284> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/3f1ba1a6-4e4a-4363-97a0-3518799333b1> a crm:E22_Human-Made_Object ;
     crm:P108i_was_produced_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/89888b3c-7f2a-34bf-8e35-23c984635545> ;
@@ -5579,7 +5634,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/54ac1fd3-2c05-4769-9294-24681d04ed0d>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/91959695-07bc-476d-b0af-6e812ecc37c9> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16547516#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16542589> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16542589>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=16547516> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/419f108c-b75c-3cc3-8efa-a03fd32a2149> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/1b64295f-6142-3fef-b066-446adc460a1f>,
@@ -5600,7 +5656,9 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/07e2a503-7762-46f8-ab5a-1d0dd051f022>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/7063afee-36a0-4cac-bbce-f1135de693c2> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14866934#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14865814#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23682159> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14865814>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14866934>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23682159> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/421103aa-4f0f-4adf-981f-735eb3647865> a crm:E14_Condition_Assessment ;
     crm:P14_carried_out_by <https://data.cultureelerfgoed.nl/term/id/rn/294dee15-bd98-458a-841a-121e16770409>,
@@ -5822,7 +5880,9 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/a9471b33-4115-46a4-86ba-84b811a3f849>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/ac8f811f-3b5b-4cd0-9a43-83b7eadda507> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14865580#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14867837#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23682264> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14865580>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14867837>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23682264> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/4f473452-735a-3284-9067-8d8d9a088ed1> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/1a08112d-79f3-3fb5-95c5-e96a0500201b>,
@@ -6225,7 +6285,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/3f1ba1a6-4e4a-4363-97a0-3518799333b1>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/cffbfdd9-65f4-4275-abf2-796da1360830> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17789343#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17786753> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17786753>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17789343> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/64d28676-3574-467c-ac6e-24e039a98bba> a crm:E14_Condition_Assessment ;
     crm:P14_carried_out_by <https://data.cultureelerfgoed.nl/term/id/rn/14060053-b675-4c06-9193-b74c242f362f>,
@@ -6432,7 +6493,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/4281c34b-14df-4ad1-917f-a2f2e7de9c07>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/c3bb0231-9e79-4a97-b46e-c92923613db8> ;
     crm:P72_has_language "Engels" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14812243#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14822145> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14812243>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14822145> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/6d23b98a-48fd-3518-a890-95b70c87c69a> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/109437d5-032a-3aac-bf50-d5c359f427f3>,
@@ -6502,7 +6564,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/0b0da826-1b60-4e12-a78e-9628e837517d>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/2138ae5b-1aa5-4a90-8b89-d0cb1e7076e5> ;
     crm:P72_has_language "Engels" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14902075#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14876853> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14876853>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14902075> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/6f8bb479-7844-313e-9b40-a5236ac1e3f7> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/1f51e223-00b0-3271-b7f5-643ecff28afc>,
@@ -6852,7 +6915,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/276ea781-a708-4c20-bd97-fa6a26a2680c>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/63ba44ec-2f67-4297-aa96-c0c5150d30f4> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14904973#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14902550> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14902550>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14904973> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/7e385d3a-bd77-318e-a0fb-680fa0ee7364> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/323fd7cb-9410-3581-b0c8-7966c3d99f57>,
@@ -7205,7 +7269,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/a108f782-34a0-4506-9b8c-e03dc1fd760d>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/f7c580d1-a7fe-4560-975c-15ea7458f9a1> ;
     crm:P72_has_language "Engels" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=26407786#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=26410383> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=26407786>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=26410383> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/87e8aa85-d8df-3720-b137-8fcf92e72ccb> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/65af3993-0d25-43fb-a793-f5b296fa0fd7>,
@@ -7463,7 +7528,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/9ae4e6db-85d4-4a65-8922-0aca8d96557c>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/dd5fd963-788e-47e9-a901-5a6aa828771e> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=39546859#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24483912> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24483912>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=39546859> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/935aebb9-9b2b-437d-91de-891ca659bc3f> a crm:E14_Condition_Assessment ;
     crm:P14_carried_out_by <https://data.cultureelerfgoed.nl/term/id/rn/14060053-b675-4c06-9193-b74c242f362f>,
@@ -7504,7 +7570,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/d23e12e2-6bb1-4bb2-8618-8506eb9f0ac1>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/f27bd281-69e0-46a9-a9a9-128162bf390e> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17818089#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17818562> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17818089>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=17818562> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/9493bff3-4997-4bd5-93b8-bc0090a51cce> a crm:E14_Condition_Assessment ;
     crm:P14_carried_out_by <https://data.cultureelerfgoed.nl/term/id/rn/14060053-b675-4c06-9193-b74c242f362f>,
@@ -7587,7 +7654,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/b658d1d6-a4be-416b-8157-f79b7b57b7c9>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/f7a860d9-353f-47ab-bafe-55e9c77f4b25> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14757690#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14814813> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14757690>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14814813> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/99519c32-508e-4d1a-b096-e5c73bd2b290> a crm:E22_Human-Made_Object ;
     crm:P108i_was_produced_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/89888b3c-7f2a-34bf-8e35-23c984635545> ;
@@ -7893,7 +7961,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/c60d8a1c-a74b-4049-bbe1-0563968c9fae>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/e7b2a448-61a4-4003-a0f6-a29d21a6f097> ;
     crm:P72_has_language "Engels" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14743149#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24346071> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14743149>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24346071> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/a4a59b7a-35b0-4992-a1b9-f2dc30865421> a crm:E14_Condition_Assessment ;
     crm:P14_carried_out_by <https://data.cultureelerfgoed.nl/term/id/rn/14060053-b675-4c06-9193-b74c242f362f>,
@@ -8099,7 +8168,8 @@
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/c822375e-5bc8-4e2f-9cf2-0c319c0ef278> ;
     crm:P72_has_language "Engels",
         "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14905592#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14905025> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14905025>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14905592> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/ac8f811f-3b5b-4cd0-9a43-83b7eadda507> a crm:E22_Human-Made_Object ;
     crm:P108i_was_produced_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/89888b3c-7f2a-34bf-8e35-23c984635545> ;
@@ -8716,7 +8786,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/6f8bd954-cfad-4e1c-b984-7128d0747402>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/da1a583a-71d1-49b3-8c63-41103af2f517> ;
     crm:P72_has_language "Engels" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14854586#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14855763> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14854586>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14855763> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/c2afe282-af4b-36c9-b5e3-191aa5381a4c> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/226ad49f-5090-33c2-baff-21d960d1d1a3>,
@@ -8799,7 +8870,8 @@
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/ab7eef98-d774-42db-bb22-3632b2f8ab11> ;
     crm:P72_has_language "Engels",
         "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14874187#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14872809> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14872809>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14874187> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/c481dcec-9b9b-3669-a434-6695bd7f2343> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/56294e12-2fb7-3f70-808b-31ebe1e03475>,
@@ -9665,7 +9737,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/94e3f885-dd1b-4a20-b599-82cd0188f798>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/dd54fc41-9bcb-4733-bf1e-7a4396feb315> ;
     crm:P72_has_language "Engels" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14743835#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24324367> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=14743835>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=24324367> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/df925005-7757-487e-9854-3cd8c82f1149> a crm:E22_Human-Made_Object ;
     crm:P108i_was_produced_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/89888b3c-7f2a-34bf-8e35-23c984635545> ;
@@ -9705,7 +9778,8 @@
     crm:P67_refers_to <https://linkeddata.cultureelerfgoed.nl/id/vgww/6236b492-dbff-4990-bffe-5a20f2e85197>,
         <https://linkeddata.cultureelerfgoed.nl/id/vgww/e5c27732-e354-4cda-ac03-85b8683a7414> ;
     crm:P72_has_language "Nederlands" ;
-    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23997511#https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23997012> .
+    la:access_point <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23997012>,
+        <https://proza.ocw.local/otcs/cs.exe/open/?func=doc.Fetch&nodeid=23997511> .
 
 <https://linkeddata.cultureelerfgoed.nl/id/vgww/dfe40f83-0b9c-34a4-a50b-1e9300d39b26> a crm:E33_Linguistic_Object ;
     crm:P1_is_identified_by <https://linkeddata.cultureelerfgoed.nl/id/vgww/4263a9e7-7c5a-39be-aae5-684aa9e49718>,
