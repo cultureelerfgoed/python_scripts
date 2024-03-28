@@ -1,0 +1,75 @@
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX ceosp: <https://linkeddata.cultureelerfgoed.nl/def/ceosp#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+
+INSERT {
+    GRAPH <https://linkeddata.cultureelerfgoed.nl/graph/instanties-rijksmonument> {
+        ?rm a ceo:Rijksmonument 
+    ; ceo:rijksmonumentnummer ?rijksmonumentnummer
+    ; ceosp:volledigAdres ?adres
+    ; ceosp:woonplaatsnaam ?woonplaatsnaam 
+    ; ceosp:heeftGemeente ?gemeente 
+    ; ceosp:heeftProvincie ?provincie
+    ; ceosp:redengevendeOmschrijving ?redengevendeOmschrijving
+    ; ceosp:geometrie ?geo
+    ; ceosp:stijlEnCultuur ?stijl
+    ; ceosp:type ?type
+    ; ceosp:bebouwdekomType ?bebouwdeKom 
+    ; ceosp:naam ?naam 
+    ; ceosp:situering ?situering
+    ; ceosp:oorspronkelijkeFunctie ?oorspronkelijkeFunctie .
+   ?rm ceo:heeftGebeurtenis ?gebeurtenis .
+  ?gebeurtenis ceo:heeftGebeurtenisNaam ?gebeurtenisNaam  . 
+  ?gebeurtenisNaam skos:prefLabel ?labelGebeurtenisnaam .
+  ?gebeurtenis ceo:heeftDatering ?datering  .
+  ?datering ceo:heeftBeginDatering ?begindatering .
+  ?begindatering ceo:datum ?datumBegindatering   .
+  ?datering ceo:heeftEindDatering ?einddatering .
+  ?einddatering ceo:datum ?datumEinddatering  .
+  ?gebeurtenis ceo:heeftActorEnRol ?actorEnRol .
+  ?actorEnRol ceo:heeftActor ?actor .
+  ?actorEnRol ceo:heeftRol ?rol .
+  ?rm ceo:heeftHooftobject ?complex . ?complex ceo:isHooftobjectVan ?rm .
+  ?rm ceo:isOnderdeelVanComplex ?complex . ?complex ceo:heeftRijksmonument ?rm .
+  ?complex ceosp:naam ?naam .
+    ?rm ceosp:kadasterdeel ?kadasterdeel .
+   ?rm ceosp:kadasterdeelnummer ?kadasterdeelnummer .
+    ?rm ceosp:monumentAard ?monumentAard .
+    ?rm ceosp:stijlZuiverheid ?zuiverheid .
+    }
+} WHERE { 
+    ?rm a ceo:Rijksmonument 
+    ; ceo:rijksmonumentnummer ?rijksmonumentnummer
+    ; ceo:heeftJuridischeStatus 
+    <https://data.cultureelerfgoed.nl/term/id/rn/b2d9a59a-fe1e-4552-9a05-3c2acddff864>
+    OPTIONAL { ?rm ceo:heeftBasisregistratieRelatie/ceo:heeftBAGRelatie/ceo:volledigAdres ?adres }.
+    OPTIONAL { ?rm ceo:heeftBasisregistratieRelatie/ceo:heeftBAGRelatie/ceo:woonplaatsnaam  ?woonplaatsnaam } .
+    OPTIONAL { ?rm ceo:heeftBasisregistratieRelatie/ceo:heeftBAGRelatie/ceo:postcode ?postcode } .
+    OPTIONAL { ?rm ceo:heeftBasisregistratieRelatie/ceo:heeftGemeente ?gemeente } .
+    OPTIONAL { ?rm ceo:heeftBasisregistratieRelatie/ceo:heeftProvincie ?provincie } .
+    OPTIONAL { ?rm ceo:heeftOmschrijving ?omschrijving . ?omschrijving ceo:omschrijving ?redengevendeOmschrijving ; ceo:formeelStandpunt "true"^^xsd:boolean } .
+    OPTIONAL { ?rm ceo:heeftGeometrie/geo:asWKT ?geo } .
+    OPTIONAL { ?rm ceo:heeftStijlEnCultuur/ceo:heeftStijlEnCultuurNaam/skos:prefLabel ?stijl } .
+    OPTIONAL { ?rm ceo:heeftType/ceo:heeftTypeNaam/skos:prefLabel ?type } .
+    OPTIONAL { ?rm ceo:heeftBebouwdeKomType/skos:prefLabel ?bebouwdeKom } .
+    OPTIONAL { ?rm ceo:heeftNaam/ceo:naam ?naam } .
+    OPTIONAL { ?rm ceo:heeftBasisregistratieRelatie/ceo:heeftBAGRelatie/ceo:heeftSituering/skos:prefLabel ?situering } .
+    OPTIONAL { ?rm ceo:heeftOorspronkelijkeFunctie/ceo:heeftFunctieNaam/skos:prefLabel ?oorspronkelijkeFunctie } .
+  OPTIONAL {  ?rm ceo:heeftGebeurtenis ?gebeurtenis . ?gebeurtenis ceo:heeftGebeurtenisNaam ?gebeurtenisNaam } . OPTIONAL { ?gebeurtenisNaam skos:prefLabel ?labelGebeurtenisnaam } .
+    OPTIONAL { ?gebeurtenis ceo:heeftDatering ?datering } .
+    OPTIONAL { ?datering ceo:heeftBeginDatering ?begindatering }.
+    OPTIONAL { ?begindatering ceo:datum ?datumBegindatering } .
+  OPTIONAL { ?datering ceo:heeftEindDatering ?einddatering } .
+  OPTIONAL { ?einddatering ceo:datum ?datumEinddatering  }.
+  OPTIONAL { ?gebeurtenis ceo:heeftActorEnRol ?actorEnRol }.
+  OPTIONAL { ?actorEnRol ceo:heeftActor ?actor }.
+  OPTIONAL { ?actorEnRol ceo:heeftRol ?rol }.
+    OPTIONAL { ?rm ceo:heeftHoofdobject ?complex }. OPTIONAL { ?complex ceo:isHooftobjectVan ?rm } .
+  OPTIONAL { ?rm ceo:isOnderdeelVanComplex ?complex . OPTIONAL { ?complex ceo:heeftRijksmonument ?rm } .
+  OPTIONAL { ?complex ceo:heeftNaam/ceo:naam ?naam }.
+  OPTIONAL { ?rm ceo:heeftBasisregistratieRelatie/ceo:heeftBRKRelatie/ceo:kadasterdeel ?kadasterdeel }.
+  OPTIONAL { ?rm ceo:heeftBasisregistratieRelatie/ceo:heeftBRKRelatie/ceo:kadasterdeelnummer ?kadasterdeelnummer }
+  OPTIONAL { ?rm ceo:heeftMonumentAard/skos:prefLabel ?monumentAard } 
+        OPTIONAL { ?rm ceo:heeftStijlEnCultuur/ceo:heeftZuiverheid/skos:prefLabel ?zuiverheid }}}
