@@ -6,9 +6,6 @@ from datetime import datetime
 input_file_openrefine = '/Users/patrickmout/Downloads/VGWW/Onderzoek-Van-Gogh-tbv-Van-Gogh-Worldwide.xlsx'
 df = pd.read_excel(input_file_openrefine)
 
-# Verwijderen witruimtekarakters (zoals spaties, tabs, nieuwe regels, etc.)
-df = df.replace(r'\s+', '', regex=True)
-
 # Definieer de huidige datum
 current_date = datetime.now().strftime("%Y-%m-%d")
 
@@ -39,7 +36,7 @@ output_graph.bind("dig", dig)
 for index, row in df.iterrows():
             output_graph.add((i.term(URIRef(row['uuid_E33'])), RDF.type, crm.E33_Linguistic_Object))
 
-            # aanduiding technisch rapport
+            # aanduiding technisch rapport (E33)
             output_graph.add((i.term(URIRef(row['uuid_E33'])), crm.P2_has_type, (URIRef('http://vocab.getty.edu/aat/300027323'))))
             output_graph.add((URIRef('http://vocab.getty.edu/aat/300027323'), RDF.type, crm.E55_Type))
             output_graph.add((URIRef('http://vocab.getty.edu/aat/300027323'), RDFS.label, Literal('technical report', lang='en')))
@@ -66,7 +63,7 @@ for index, row in df.iterrows():
                 output_graph.add((i.term(URIRef(row['uuid_E33'])), crm.P1_is_identified_by, i.term(URIRef(row['uuid exemplaar.nummer']))))
                 output_graph.add((i.term(URIRef(row['uuid exemplaar.nummer'])), RDF.type, crm.E42_Identifier))
                 output_graph.add((i.term(URIRef(row['uuid exemplaar.nummer'])), crm.P190_has_symbolic_content, Literal(row['exemplaar.nummer'])))
-                output_graph.add((i.term(URIRef(row['uuid exemplaar.nummer'])), crm.P2_has_type,(URIRef('https://data.cultureelerfgoed.nl/term/id/rn/70003ebd-15ba-4f93-9c0c-baac09ccff44'))))
+                output_graph.add((i.term(URIRef(row['uuid exemplaar.nummer'])), crm.P2_has_type, (URIRef('https://data.cultureelerfgoed.nl/term/id/rn/70003ebd-15ba-4f93-9c0c-baac09ccff44'))))
                 output_graph.add((URIRef('https://data.cultureelerfgoed.nl/term/id/rn/70003ebd-15ba-4f93-9c0c-baac09ccff44'), RDF.type, crm.E55_Type))
                 output_graph.add((URIRef('https://data.cultureelerfgoed.nl/term/id/rn/70003ebd-15ba-4f93-9c0c-baac09ccff44'), RDFS.label, Literal('rce dossiernummer', lang='nl')))
 
@@ -79,6 +76,7 @@ for index, row in df.iterrows():
                 output_graph.add((i.term(URIRef(row['uuid ICN_objectnummer'])), crm.P2_has_type, (URIRef('https://data.cultureelerfgoed.nl/term/id/rn/be568e9e-9cab-48ef-b226-fd9d37b971b1'))))
                 output_graph.add((URIRef('https://data.cultureelerfgoed.nl/term/id/rn/be568e9e-9cab-48ef-b226-fd9d37b971b1'), RDF.type, crm.E55_Type))
                 output_graph.add((URIRef('https://data.cultureelerfgoed.nl/term/id/rn/be568e9e-9cab-48ef-b226-fd9d37b971b1'), RDFS.label, Literal('rce objectnummer', lang='nl')))
+
             # trefwoord
             for index in range(1, 13):
                 uri_trefwoord_col = f'uri trefwoord.inhoud {index}'
@@ -96,37 +94,25 @@ for index, row in df.iterrows():
                     output_graph.add((URIRef(uri_trefwoord), RDF.type, crm.E55_Type))
                     output_graph.add((URIRef(uri_trefwoord), RDFS.label, Literal(trefwoord, lang='nl')))
 
-
-            # predicaten naar andere entiteiten
-            output_graph.add((i.term(URIRef(row['uuid_E33'])), crm.P67_refers_to, i.term(URIRef(row['uuid_E14']))))
-            output_graph.add((i.term(URIRef(row['uuid_E33'])), crm.P67_refers_to, i.term(URIRef(row['uuid_E22']))))
+            # E33_E41 Linguistic_Appellation
+            output_graph.add((i.term(URIRef(row['uuid_E33_E41'])), RDF.type, crm.E33_E41_Linguistic_Appelation))
+            output_graph.add((i.term(URIRef(row['uuid_E33_E41'])), crm.P2_has_type, (URIRef('http://vocab.getty.edu/aat/300404670'))))
 
             # taal
             taalcode_1 = row['taalcode 1']
             if taalcode_1 is not None and not pd.isna(taalcode_1):
-                output_graph.add((i.term(URIRef(row['uuid_E33'])), crm.P72_has_language, Literal(row['taalcode 1'])))
+                output_graph.add((i.term(URIRef(row['uuid_E33_E41'])), crm.P72_has_language, URIRef(row['taalcode 1'])))
             taalcode_2 = row['taalcode 2']
             if taalcode_2 is not None and not pd.isna(taalcode_2):
-                output_graph.add((i.term(URIRef(row['uuid_E33'])), crm.P72_has_language, Literal(row['taalcode 2'])))
+                output_graph.add((i.term(URIRef(row['uuid_E33_E41'])), crm.P72_has_language, URIRef(row['taalcode 2'])))
 
-            # digitale referentie
-            output_graph.add((i.term(URIRef(row['uuid_E33'])), la.access_point, URIRef(row['digitale_referentie'])))
-            output_graph.add((URIRef(row['digitale_referentie']), RDF.type, dig.D1_Digital_Object))
-
-            # toegankelijkheid
-            output_graph.add((i.term(URIRef(row['uuid_E33'])), crm.P2_has_type, (URIRef('http://vocab.getty.edu/aat/3004449723'))))
-            output_graph.add((URIRef('http://vocab.getty.edu/aat/3004449723'), RDF.type, crm.E55_Type))
-            output_graph.add((URIRef('http://vocab.getty.edu/aat/3004449723'), RDFS.label, Literal(row['toegankelijkheid'], lang='en')))
-
-
-            # E14 Condition Assessment (Technisch onderzoek)
-            output_graph.add((i.term(URIRef(row['uuid_E14'])), RDF.type, crm.E14_Condition_Assessment))
-
+            # E65 Creation
+            output_graph.add((i.term(URIRef(row['uuid_E65'])), RDF.type, crm.E65_Creation))
 
             # projectnummer
             uuid_project_nummer = row['uuid werknummer']
             if uuid_project_nummer is not None and not pd.isna(uuid_project_nummer):
-                output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P1_is_identified_by, i.term(URIRef(row['uuid werknummer']))))
+                output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P1_is_identified_by, i.term(URIRef(row['uuid werknummer']))))
                 output_graph.add((i.term(URIRef(row['uuid werknummer'])), RDF.type, crm.E42_Identifier))
                 output_graph.add((i.term(URIRef(row['uuid werknummer'])), crm.P190_has_symbolic_content, Literal(row['werknummer'])))
                 output_graph.add((i.term(URIRef(row['uuid werknummer'])), crm.P2_has_type, (URIRef('https://data.cultureelerfgoed.nl/term/id/rn/6e5da07f-8f5e-40b0-83b9-15c6523edc11'))))
@@ -134,12 +120,12 @@ for index, row in df.iterrows():
                 output_graph.add((URIRef('https://data.cultureelerfgoed.nl/term/id/rn/6e5da07f-8f5e-40b0-83b9-15c6523edc11'), RDFS.label, Literal('rce projectnummer', lang='nl')))
 
             # aanduiding Onderzoek
-            output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P2_has_type, (URIRef('http://vocab.getty.edu/aat/300054687'))))
+            output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P2_has_type, (URIRef('http://vocab.getty.edu/aat/300054687'))))
             output_graph.add((URIRef('http://vocab.getty.edu/aat/300054687'), RDF.type, crm.E55_Type))
             output_graph.add((URIRef('http://vocab.getty.edu/aat/300054687'), RDFS.label, Literal('research (function)', lang='en')))
 
             # analysemethode
-            for index in range(1, 7):
+            for index in range(1, 11):
                 uri_analysemethode_col = f'uri analysemethode {index}'
                 label_analysemethode_col = f'analysemethode {index}'
 
@@ -147,12 +133,15 @@ for index, row in df.iterrows():
                 label_analysemethode = row[label_analysemethode_col]
 
                 if uri_analysemethode is not None and not pd.isna(uri_analysemethode):
-                    output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P32_used_general_technique, URIRef(uri_analysemethode)))
+                    output_graph.add(
+                        (i.term(URIRef(row['uuid_E65'])), crm.P32_used_general_technique, URIRef(uri_analysemethode)))
                     output_graph.add((URIRef(uri_analysemethode), RDF.type, crm.E55_Type))
                     output_graph.add((URIRef(uri_analysemethode), RDFS.label, Literal(label_analysemethode, lang='nl')))
 
             # actor and role
-            output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P14_carried_out_by, URIRef(row['uri projectleider'])))
+            output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P14_carried_out_by, URIRef(row['uri projectleider'])))
+            output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P14_carried_out_by, URIRef(row['uri corporatieve_auteur'])))
+            output_graph.add((URIRef(row['uri corporatieve_auteur']), RDFS.label, Literal(row['corporatieve_auteur'], lang='nl')))
             output_graph.add((URIRef(row['uri projectleider']), RDF.type, crm.E39_Actor))
             output_graph.add((URIRef(row['uri projectleider']), RDFS.label, Literal(row['projectleider'], lang='nl')))
             output_graph.add((URIRef(row['uri projectleider']), crm.P2_has_type, (URIRef('http://vocab.getty.edu/aat/300417573'))))
@@ -167,7 +156,7 @@ for index, row in df.iterrows():
                 label_onderzoeker = row.get(label_onderzoeker_col)
 
                 if uri_ppt_onderzoekers is not None and not pd.isna(uri_ppt_onderzoekers):
-                    output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P14_carried_out_by, URIRef(uri_ppt_onderzoekers)))
+                    output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P14_carried_out_by, URIRef(uri_ppt_onderzoekers)))
                     output_graph.add((URIRef(uri_ppt_onderzoekers), RDF.type, crm.E39_Actor))
                     output_graph.add((URIRef(uri_ppt_onderzoekers), RDFS.label, Literal(label_onderzoeker, lang='nl')))
                     output_graph.add((URIRef(uri_ppt_onderzoekers), crm.P2_has_type, (URIRef('http://vocab.getty.edu/aat/300025576'))))
@@ -176,19 +165,15 @@ for index, row in df.iterrows():
 
             # time-span
             # Pakt bij crm.P4_has_time-span streepje tussen time en span niet
-            output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P4_has_timespan, i.term(URIRef(row['uuid timespan']))))
+            output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P4_has_timespan, i.term(URIRef(row['uuid timespan']))))
             output_graph.add((i.term(URIRef(row['uuid timespan'])), RDF.type, URIRef('http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span')))
             output_graph.add((i.term(URIRef(row['uuid timespan'])), crm.P82a_begin_of_the_begin, Literal(row['zoekjaar'], datatype=XSD.gYear)))
             output_graph.add((i.term(URIRef(row['uuid timespan'])), crm.P82b_end_of_the_end, Literal(row['zoekjaar'], datatype=XSD.gYear)))
 
             # locatie
-            output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P7_took_place_at, URIRef(row['uri corporatieve_auteur'])))
-            output_graph.add((URIRef(row['uri corporatieve_auteur']), RDF.type, crm.E53_Place))
-            output_graph.add((URIRef(row['uri corporatieve_auteur']), RDFS.label, Literal(row['corporatieve_auteur'], lang='nl')))
-
-            # predicaten naar andere entiteiten
-            output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P67i_is_referred_by, i.term(URIRef(row['uuid_E33']))))
-            output_graph.add((i.term(URIRef(row['uuid_E14'])), crm.P34_concerned, i.term(URIRef(row['uuid_E22']))))
+            output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P7_took_place_at, URIRef(row['uri plaats van uitgave'])))
+            output_graph.add((URIRef(row['uri plaats van uitgave']), RDF.type, crm.E53_Place))
+            output_graph.add((URIRef(row['uri plaats van uitgave']), RDFS.label, Literal(row['plaats van uitgave'], lang='nl')))
 
             # E22_Human-Made_Object (Kunstwerk)
             # Mis titel kunstwerk
@@ -202,7 +187,7 @@ for index, row in df.iterrows():
             # kunstenaar
             output_graph.add((i.term(URIRef(row['uuid_E22'])), crm.P108i_was_produced_by, i.term(URIRef(row['uuid production']))))
             output_graph.add((i.term(URIRef(row['uuid production'])), RDF.type, crm.E12_Production))
-            output_graph.add((i.term(URIRef(row['uuid production'])), crm.P14_carried_out_by,(URIRef('http://vocab.getty.edu/ulan/500115588'))))
+            output_graph.add((i.term(URIRef(row['uuid production'])), crm.P14_carried_out_by, (URIRef('http://vocab.getty.edu/ulan/500115588'))))
             output_graph.add((URIRef('http://vocab.getty.edu/ulan/500115588'), RDF.type, crm.E39_Actor))
             output_graph.add((URIRef('http://vocab.getty.edu/ulan/500115588'), RDFS.label, Literal('Gogh, Vincent van', lang='nl')))
 
@@ -211,10 +196,10 @@ for index, row in df.iterrows():
             output_graph.add((URIRef('https://www.wikidata.org/wiki/Q5582'), RDFS.label, Literal('Gogh, Vincent van', lang='nl')))
 
             # Besloten om 2e persoonsnaam niet op te nemen
-            #uri_persoonsnaam_2 = row.get('uri persoonsnaam 2')
-            #if uri_persoonsnaam_2 is not None and not pd.isna(uri_persoonsnaam_2):
-             #   output_graph.add((i.term(URIRef(row['uuid Production'])), crm.P14_carried_out_by, URIRef(row['uri persoonsnaam 2'])))
-              #  output_graph.add((URIRef(row['uri persoonsnaam 2']), RDFS.label, Literal(row['label persoonsnaam 2'])))
+            # uri_persoonsnaam_2 = row.get('uri persoonsnaam 2')
+            # if uri_persoonsnaam_2 is not None and not pd.isna(uri_persoonsnaam_2):
+            #   output_graph.add((i.term(URIRef(row['uuid Production'])), crm.P14_carried_out_by, URIRef(row['uri persoonsnaam 2'])))
+            #  output_graph.add((URIRef(row['uri persoonsnaam 2']), RDFS.label, Literal(row['label persoonsnaam 2'])))
 
             # De La Faille number
             uuid_E22 = str(row['uuid_E22'])
@@ -236,17 +221,23 @@ for index, row in df.iterrows():
 
                 if Fnummer is not None and not pd.isna(Fnummer):
                     output_graph.add((i.term(URIRef(uuid_F_nummer)), crm.P190_has_symbolic_content, Literal(Fnummer)))
-                    output_graph.add((i.term(URIRef(uuid_F_nummer)), crm.P2_has_type, URIRef('https://vangoghworldwide.org/data/concept/f_number')))
+                    output_graph.add((i.term(URIRef(uuid_F_nummer)), crm.P2_has_type,URIRef('https://vangoghworldwide.org/data/concept/f_number')))
                     output_graph.add((URIRef('https://vangoghworldwide.org/data/concept/f_number'), RDF.type, crm.E55_Type))
                     output_graph.add((URIRef('https://vangoghworldwide.org/data/concept/f_number'), RDFS.label, Literal('De La Faille number', lang='nl')))
 
             # predicaten naar andere entiteiten
-            output_graph.add((i.term(URIRef(row['uuid_E22'])), crm.P67i_is_referred_by, i.term(URIRef(row['uuid_E33']))))
-            output_graph.add((i.term(URIRef(row['uuid_E22'])), crm.P34i_was_assessed_by, i.term(URIRef(row['uuid_E14']))))
-
+            output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P94_has_created, i.term(URIRef(row['uuid_E33']))))
+            output_graph.add((i.term(URIRef(row['uuid_E33'])), crm.P94i_was_created_by, i.term(URIRef(row['uuid_E65']))))
+            output_graph.add((i.term(URIRef(row['uuid_E65'])), crm.P16_used_specific_object, i.term(URIRef(row['uuid_E22']))))
+            output_graph.add((i.term(URIRef(row['uuid_E22'])), crm.P16i_was_used_for, i.term(URIRef(row['uuid_E65']))))
 
 # Sla dataframe op in Turtle file
 output_graph.serialize(destination=output_file, format='ttl')
+
+
+
+
+
 
 
 
